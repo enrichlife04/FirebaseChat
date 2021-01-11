@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessoryView" customModule="ChatappWithFireBase" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="exP-ED-rp1" id="tg3-YV-H5C"/>
+                <outlet property="sendButton" destination="HK9-5C-ICz" id="0xG-As-exZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="メッセージがここに入ります" translatesAutoresizingMaskIntoConstraints="NO" id="exP-ED-rp1">
+                    <rect key="frame" x="10" y="10" width="366" height="52"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HK9-5C-ICz">
+                    <rect key="frame" x="386" y="25" width="16" height="22"/>
+                    <state key="normal" image="Image"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="PR4-LO-IBN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HK9-5C-ICz" firstAttribute="leading" secondItem="exP-ED-rp1" secondAttribute="trailing" constant="10" id="2ur-E9-TZr"/>
+                <constraint firstAttribute="bottom" secondItem="exP-ED-rp1" secondAttribute="bottom" constant="20" id="HS1-0M-KHO"/>
+                <constraint firstItem="exP-ED-rp1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="MXx-vY-7Ac"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HK9-5C-ICz" secondAttribute="trailing" constant="15" id="Pp4-aV-OYl"/>
+                <constraint firstItem="HK9-5C-ICz" firstAttribute="centerY" secondItem="exP-ED-rp1" secondAttribute="centerY" id="mgS-u9-MCr"/>
+                <constraint firstItem="exP-ED-rp1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yg2-Pm-w7g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-613.07692307692309" y="-383.17535545023696"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Image" width="16" height="16"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
