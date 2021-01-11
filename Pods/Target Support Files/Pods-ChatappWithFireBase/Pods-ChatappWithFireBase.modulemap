@@ -1,0 +1,6 @@
+framework module Pods_ChatappWithFireBase {
+  umbrella header "Pods-ChatappWithFireBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

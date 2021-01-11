@@ -36,6 +36,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         //ユーザーの情報を引っ張ってくるコード
         fetchChatroomsInfoFromFirestore()
+        print("")
     }
     
     override func viewWillAppear(_ animated: Bool) {
